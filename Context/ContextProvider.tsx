@@ -1,22 +1,17 @@
 import React, { createContext, useState } from "react";
-import { StyleSheet, View } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
-import { getLocationDetails } from './../action/locationDetails';
-import moment from 'moment';
-import { postLocation } from "../action/postLocation";
-
+import { View } from "react-native";
 
 export const Context = createContext({
   location: [],
   locationDetails: [],
   time: [],
   date: [],
-  currentLocation:[],
-  setLocationDetails:(a:any)=>{},
-  setTime:(a:any)=>{},
-  setDate:(a:any)=>{},
-  setLocation:(a:any)=>{},
-  setCurrentLocation:(a:any)=>{}
+  currentLocation: [],
+  setLocationDetails: (a: any) => {},
+  setTime: (a: any) => {},
+  setDate: (a: any) => {},
+  setLocation: (a: any) => {},
+  setCurrentLocation: (a: any) => {},
 });
 
 function ContextProvider({ children }: any) {
@@ -24,7 +19,7 @@ function ContextProvider({ children }: any) {
   const [locationDetails, setLocationDetails] = useState<any>([]);
   const [time, setTime] = useState<any>([]);
   const [date, setDate] = useState<any>([]);
-  const[currentLocation, setCurrentLocation] = useState<any>([]);
+  const [currentLocation, setCurrentLocation] = useState<any>([]);
 
   const context: any = {
     location,

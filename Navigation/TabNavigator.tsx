@@ -1,14 +1,9 @@
-
-
-
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
 import React from 'react';
-import Map from '../Components/Map';
+import Map from '../Components/Screens/Map';
 import HomePage from '../Components/Screens/HomePage';
-import { SafeAreaProvider } from 'react-native-safe-area-context';
 import ContextProvider from '../Context/ContextProvider';
-
 
 const Tab:any = createBottomTabNavigator()
 
